@@ -36,110 +36,117 @@
     /*End of CSS reset*/
 
     body {
-        font-family: 'Space Grotesk', sans-serif;
-        background-color: #ffeedf;
-        color: #145434
+        font-family: 'Montserrat', sans-serif;
+        background-color: #f8f7f3;
+        color: #1a24fb;
     }
     
     /* === HEADER === */
+
     header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: fixed;
         width: 100%;
-        height: 60px;
+        max-width: 1280px;
+        height: 40px;
         top: 0;
         padding: 10px;
-        border-bottom: 1px solid #145434;
-        background-color: #ffeedf;
+        color: #f8f7f3;
+        background-color: #1a24fb;
+        text-transform: uppercase;
         z-index: 2;
     }
     
-    #title {
-        font-size: 36px;
-        font-weight: 700;
+    #caption {
+        font-size: 12px;
+        letter-spacing: 0.2em;
+        font-weight: 400;
     }
 
+    .material-icons.menu {
+        font-size: 24px;
+    }
     
     /* === CARDS === */
+
     #root {
-        display: flex;
-        flex-direction: row;
+        display: flex;   
         flex-wrap: wrap;
         justify-content: center;
-        gap: 60px;
-        max-width: 1200px;
+        gap: 100px 20px;
+        max-width: 1280px;
+        width: 100%;
         margin: 0 auto;
-        padding: 130px 50px;
+        padding: 100px 50px;
     }
     
     .bookcard {
         display: flex;
         flex-direction: column;
         position: relative;
-        width: 375px;
-        min-height: 280px;
-        background-color: #145434;
-        color: #ffeedf;
+        min-height: 450px;
+        max-width: 350px;
+        padding: 40px;
+        border: 2px solid #1a24fb;
+        background-color: #f8f7f3;
+        color: #1a24fb;
     }
     
     .number {
         position: absolute;
-        top: -20px;
-        left: -20px;
+        top: 5px;
+        right: 3px;
         width: 40px;
         height: 40px;
         padding: 2px;
-        text-align: center;
-        border-radius: 20px;
-        border: 2px solid #145434;
+        text-align: center;    
         font-size: 24px;
-        background-color: #ffeedf;
-        color: #145434;
+        font-weight: 700;
+        background-color: #f8f7f3;
+        color: #1a24fb;
+    }
+
+    .author {
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-size: 12px;
+        font-weight: 400;
+    }
+    
+    .description {
+        font-size: 16px;
+        font-family: 'Overpass', sans-serif;
+        font-weight: 400;
     }
     
     .name {
         display: flex;
         align-items: center;
-        height: 50%;
-        margin: 40px 30px 10px 30px;
-        padding-bottom: 40px;
-        border-bottom: 1px solid #ffeedf;
+        margin-top: 15px;
+        margin-bottom: 25px;
         font-size: 36px;
+        font-weight: 700;
+    }
+        
+    .details-button {
+        display: flex;
+        position: absolute;              
+        justify-content: space-between;
+        width: 350px;
+        height: 18px;
+        margin-top: 10px;
+        font-size: 14px;
+        background-color: #f8f7f3;
+        color: #1a24fb
     }
     
-    .basic-info {
-        margin: 0px 30px 60px 30px;
+    .material-icons.arrow {
         font-size: 18px;
     }
     
-    .description {
-        font-weight: 700;
-    }
-    
-    .details-button {
-        display: flex;
-        position: absolute;
-        justify-content: space-between;
-        align-items: center;
-        right: -10px;
-        bottom: -10px;
-        width: 200px;
-        height: 50px;
-        padding-left: 75px;
-        border: 2px solid #145434;
-        font-size: 14px;
-        background-color: #ffeedf;
-        color: #145434;
-    }
-    
-    .arrow {
-        font-size: 36px !important;
-    }
-    
     .details-button:hover {
-        border: 2px solid #ffeedf;
-        background-color: #145434;
-        color: #ffeedf;
+        background-color: #1a24fb;
+        color: #f8f7f3;
     }

@@ -10,21 +10,23 @@ function loadEvent() {
 
       document.getElementById("root").insertAdjacentHTML('beforeend', `
         <header>
-            <p id="title">New York Times Best Sellers</p>
-            <button class="material-icons">menu</button>
+            <p id="caption">New York Times Best Sellers</p>
+            <button class="material-icons menu">menu</button>
         </header>
       `)
 
       data.cards.map(({title, sub, text}, i ) => document.getElementById('root').insertAdjacentHTML('beforeend', `
-        <div class="bookcard">
-            <p class="number">${i+1}</p>
-            <p class="name">${title}</p>
-            <div class="basic-info">
-                <p>${sub}</p>
+        <div>
+            <div class="bookcard">  
+                <p class="number">${i+1}</p>
+                <p class="author">${sub}</p>
+                <p class="name">${title}</p>         
                 <p class="description">${text}</p>
-            </div>   
-            <button class="details-button">details <span class="material-icons arrow">arrow_forward</span></button>         
+            </div>
+            <button class="details-button">read more <span class="material-icons arrow">arrow_forward</span></button>
         </div>
+                 
+        
         `))
       
     }).catch(function(err) {
